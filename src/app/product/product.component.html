@@ -1,6 +1,6 @@
-<div class="header">
-    {{product}}
-</div>
+<h1 class="header">
+    {{product.name}}
+</h1>
 
 <div class="rating">
     Rating
@@ -8,5 +8,14 @@
 </div>
 
 <div class="country-of-origin">
-    Country of Origin
+    Country of Origin: {{product.countryOfOrigin}}
+</div>
+
+<div class="user-feed-back">
+    <div> Product </div>
+    <textarea></textarea>
+
+    <div class="review" *ngFor="let review of product.reviews">
+        {{review}}
+    </div>
 </div>

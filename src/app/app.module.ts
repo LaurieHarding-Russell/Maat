@@ -1,3 +1,5 @@
+import { CompanyService } from './services/company.service';
+import { ProductService } from './services/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +10,7 @@ import {ProductComponent} from "./product/product.component";
 import {ResultsComponent} from "./results/results.component";
 import {CompanyComponent} from "./company/company.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SearchService } from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
       ReactiveFormsModule,
       FormsModule
   ],
-  providers: [],
+  providers: [
+    SearchService,
+    ProductService,
+    CompanyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

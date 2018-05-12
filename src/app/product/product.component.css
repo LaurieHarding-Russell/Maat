@@ -9,3 +9,12 @@
 .country-of-origin {
 
 }
+
+.user-feed-back {
+    border: 1px;
+    border-color: var(--secondary);
+}
+
+.review {
+    /* padding: 1rem; */
+}

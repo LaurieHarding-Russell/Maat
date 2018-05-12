@@ -1,5 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core';
+import { generateStarArray } from "../general.util"
 
 @Component({
   selector: 'product',
@@ -7,12 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  product;
-  stars = [true, true, true, false, false];
+  product: Product = {
+    name: "test",
+    rating: 4,
+    countryOfOrigin: "Canada",
+    reviews: ["test1", "test2"],
+    company: null
+  };
+
+  stars: Array<boolean>;
 
   constructor(private activatedRoute: ActivatedRoute) { }
   
   ngOnInit() {
-    this.product = this.activatedRoute.snapshot.queryParamMap.get("name");
+    this.stars = generateStarArray(this.product.rating);
   }
 }
