@@ -27,4 +27,8 @@ export class ResultsComponent implements OnInit {
     this.router.navigate(['./results'], {queryParams: queryParams})
   }
 
+  onLogoClick() {
+    this.router.navigate(["../"]);
+  }
+
 }

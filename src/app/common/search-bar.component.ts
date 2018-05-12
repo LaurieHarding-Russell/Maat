@@ -30,7 +30,6 @@ import {Component} from "@angular/core";
             font-size: 1.2rem;
             padding: 5px 15px 5px 15px;
             border: 0;
-            margin-bottom: 5rem;
         }
     `],
     providers: [

@@ -1,11 +1,10 @@
 <div class="page-container">
     <div class="header-container">
-        <div class="title">
+        <div class="title" (click)="onLogoClick()">
             MAAT
         </div>
         <div class="search-container">
             <form class="search-bar" (ngSubmit)="onSearch()">
-                <!--<input type="text" [formControl]="searchControl"/>-->
                 <search-bar [formControl]="searchControl"></search-bar>
             </form>
         </div>
