@@ -5,7 +5,7 @@
 # ESModule imports (and TypeScript imports) can be absolute starting with the workspace name.
 # The name of the workspace should match the npm package where we publish, so that these
 # imports also make sense when referencing the published package.
-workspace(name = "angular_bazel_example")
+workspace(name = "maat")
 
 
 ####################################
