@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
-import { CompanyComponent } from './company/company.component';
-import { ProductComponent } from './product/product.component';
-import { ResultsComponent } from './results/results.component';
-
+import {AppRoutingModule} from "./app-routing.module";
+import {SearchComponent} from "./search/search.component";
+import {ProductComponent} from "./product/product.component";
+import {ResultsComponent} from "./results/results.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { ResultsComponent } from './results/results.component';
     ResultsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
