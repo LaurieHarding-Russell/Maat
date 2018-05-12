@@ -1,0 +1,18 @@
+.header-container {
+    background-color: var(--background);
+}
+
+.title {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.header-container {
+    display: flex;
+    padding: 30px 10px 10px 20px;
+}
+
+.search-container {
+    min-width: 50%;
+}

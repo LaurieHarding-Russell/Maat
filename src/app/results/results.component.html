@@ -1,0 +1,16 @@
+<div class="page-container">
+    <div class="header-container">
+        <div class="title" (click)="onLogoClick()">
+            MAAT
+        </div>
+        <div class="search-container">
+            <form class="search-bar" (ngSubmit)="onSearch()">
+                <search-bar [formControl]="searchControl"></search-bar>
+            </form>
+        </div>
+    </div>
+
+    <div class="search-results">
+
+    </div>
+</div>
