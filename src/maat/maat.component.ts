@@ -1,12 +1,11 @@
 import {Component, NgModule} from '@angular/core';
 
 @Component({
-  selector: 'hello-world-app',
+  selector: 'maat-app',
   template: `
-    <div>Hello {{ name }}</div>
-    <input type="text" [value]="name" (input)="name = $event.target.value"/>
+    Test
   `,
-  styleUrls: ['./hello-world-styles.css']
+  styleUrls: ['./maat-styles.css']
 })
-export class HelloWorldComponent {
+export class MaatComponent {
 }

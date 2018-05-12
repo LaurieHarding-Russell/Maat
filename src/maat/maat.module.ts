@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 
-import {HelloWorldComponent} from './hello-world.component';
+import {MaatComponent} from './maat.component';
 
 @NgModule({
-  declarations: [HelloWorldComponent],
-  exports: [HelloWorldComponent],
+  declarations: [MaatComponent],
+  exports: [MaatComponent],
 })
-export class HelloWorldModule {}
+export class MaatModule {}

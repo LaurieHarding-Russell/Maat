@@ -1,4 +1,4 @@
 import {Component} from '@angular/core';
 
-@Component({selector: 'app-component', template: '<hello-world-app></hello-world-app>'})
+@Component({selector: 'app-component', template: '<maat-app></maat-app>'})
 export class AppComponent {}
