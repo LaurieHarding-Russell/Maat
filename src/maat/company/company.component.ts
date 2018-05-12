@@ -5,7 +5,9 @@ import {Component, NgModule} from '@angular/core';
   template: `
     <div> Company </div>
   `,
-  styleUrls: ['./maat-styles.css']
+  styles: [`
+    
+  `]
 })
 export class CompanyComponent {
 }

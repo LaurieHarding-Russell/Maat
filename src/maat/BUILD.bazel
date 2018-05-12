@@ -15,11 +15,13 @@ sass_binary(
 
 ng_module(
     name = "maat",
-    srcs = [
-        "company.component.ts",
-        "maat.component.ts",
-        "maat.module.ts",
-    ],
+    srcs = glob(
+                [
+                    "*.ts",
+                    "*/**/*.ts",
+                ],
+            )
+    ,
     assets = [":maat-styles"],
     tsconfig = "//src:tsconfig.json",
     deps = [
