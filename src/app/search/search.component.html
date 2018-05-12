@@ -4,6 +4,6 @@
         <div class="subtitle">Find Ethical Companies</div>
     </div>
     <form class="search-container" (ngSubmit)="onSearch()">
-        <input type="text" placeholder="Company name or product" [formControl]="searchControl"/>
+        <search-bar [formControl]="searchControl"></search-bar>
     </form>
 </div>

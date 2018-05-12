@@ -8,14 +8,16 @@ import {ProductComponent} from "./product/product.component";
 import {ResultsComponent} from "./results/results.component";
 import {CompanyComponent} from "./company/company.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SearchBarComponent} from "./common/search-bar.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchComponent,
-    CompanyComponent,
-    ProductComponent,
-    ResultsComponent
+      AppComponent,
+      SearchComponent,
+      CompanyComponent,
+      ProductComponent,
+      ResultsComponent,
+      SearchBarComponent
   ],
   imports: [
       BrowserModule,
