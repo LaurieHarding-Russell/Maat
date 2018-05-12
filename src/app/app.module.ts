@@ -6,6 +6,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {SearchComponent} from "./search/search.component";
 import {ProductComponent} from "./product/product.component";
 import {ResultsComponent} from "./results/results.component";
+import {CompanyComponent} from "./company/company.component";
 
 @NgModule({
   declarations: [
