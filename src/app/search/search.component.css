@@ -15,7 +15,7 @@
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom,var(--primary),var(--secondary));
-    opacity: .3;
+    opacity: .4;
 }
 
 .search-container {
@@ -28,7 +28,6 @@
     align-items: center;
     margin-bottom: 3.5rem;
     font-family: Roboto;
-    color: white;
     z-index: 5;
     text-shadow: 0 2px 2px #303030;
 }
@@ -36,6 +35,10 @@
 .title {
     font-size: 5rem;
     letter-spacing: 0.5rem;
+}
+
+.title-container div {
+    color: #fff;
 }
 
 .subtitle {
