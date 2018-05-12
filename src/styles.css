@@ -1,8 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --primary: #785B0F;
-    --secondary: #533A1C;
+    --primary: #634f1a;
+    --secondary: #8e5715;
+    --font-colour: #403d08;
+    --background: #bbbd9c;
     --danger: #7B1616;
     --success: #397126;
+}
+
+* {
+    color: var(--font-colour);
+}
+
+.header {
+    color: var(--primary);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.rating {
+    margin: 2rem 0;
+}
+
+.rating i {
+    color: var(--secondary);
+    margin: 2rem 0;
 }

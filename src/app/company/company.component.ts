@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'company',
   templateUrl: './company.component.html',
   styleUrls: ['./company.component.css']
 })
-export class CompanyComponent {
+export class CompanyComponent implements OnInit {
+    company;
+    stars = [true, true, true, false, false];
+
+    constructor(private activatedRoute: ActivatedRoute) { }
     
+    ngOnInit() {
+      this.company = this.activatedRoute.snapshot.queryParamMap.get("name");
+    }
+
 }

@@ -1,0 +1,12 @@
+<div class="header">
+    {{product}}
+</div>
+
+<div class="rating">
+    Rating
+    <i *ngFor="let star of stars" class="fa-star" [ngClass]="{fas: star, far:!star}"></i>
+</div>
+
+<div class="country-of-origin">
+    Country of Origin
+</div>
