@@ -3,7 +3,7 @@
         <div class="title">MAAT</div>
         <div class="subtitle">Find Ethical Companies</div>
     </div>
-    <div class="search-container">
-        <input type="text" placeholder="Company name or product"/>
-    </div>
+    <form class="search-container" (ngSubmit)="onSearch()">
+        <input type="text" placeholder="Company name or product" [formControl]="searchControl"/>
+    </form>
 </div>

@@ -7,6 +7,7 @@ import {SearchComponent} from "./search/search.component";
 import {ProductComponent} from "./product/product.component";
 import {ResultsComponent} from "./results/results.component";
 import {CompanyComponent} from "./company/company.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import {CompanyComponent} from "./company/company.component";
     ResultsComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+      BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
