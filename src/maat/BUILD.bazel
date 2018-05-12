@@ -16,6 +16,7 @@ sass_binary(
 ng_module(
     name = "maat",
     srcs = [
+        "company.component.ts",
         "maat.component.ts",
         "maat.module.ts",
     ],
