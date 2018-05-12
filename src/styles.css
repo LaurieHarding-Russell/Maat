@@ -7,3 +7,10 @@ body {
     min-height: 100%;
     margin: 0;
 }
+
+:root {
+    --primary: #785B0F;
+    --secondary: #533A1C;
+    --danger: #7B1616;
+    --success: #397126;
+}
