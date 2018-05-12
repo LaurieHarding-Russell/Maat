@@ -57,6 +57,16 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/router@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-6.0.1.tgz#bc4943b1798ed8f622f1a4f773ff5f01b5ab70de"
+  dependencies:
+    tslib "^1.9.0"
+
+"@angular/upgrade@~2.4.0":
+  version "2.4.10"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-2.4.10.tgz#b69a3ee324d4450eb1696ddc9bded1a6ec06ca52"
+
 "@bazel/benchmark-runner@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@bazel/benchmark-runner/-/benchmark-runner-0.1.0.tgz#a586394fcf7f2402b381319fbc2750627b5a06f1"
