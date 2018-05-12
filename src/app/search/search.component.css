@@ -6,6 +6,17 @@
     background-image: url("/assets/mountain_background.jpg");
 }
 
+.page-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,transparent,var(--primary));
+    opacity: .7;
+}
+
 .search-container {
     width: 75%;
     position: relative;
@@ -25,4 +36,5 @@
     width: 100%;
     font-size: 1.2rem;
     padding: 5px 15px 5px 15px;
+    border: 0;
 }
