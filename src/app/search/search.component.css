@@ -4,6 +4,7 @@
     align-items: center;
     min-height:100vh;
     background-image: url("/assets/mountain_background.jpg");
+    flex-direction: column;
 }
 
 .page-container:before {
@@ -37,4 +38,24 @@
     font-size: 1.2rem;
     padding: 5px 15px 5px 15px;
     border: 0;
+    margin-bottom: 5rem;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5rem;
+    font-family: Roboto;
+    color: white;
+    z-index: 5;
+    text-shadow: 0 2px 2px #303030;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
 }
