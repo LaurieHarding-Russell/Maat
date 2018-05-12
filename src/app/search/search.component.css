@@ -8,6 +8,17 @@
 
 .search-container {
     width: 75%;
+    position: relative;
+}
+
+.search-container:before {
+    font-family: 'Font Awesome\ 5 Free';
+    position: absolute;
+    right: -15px;
+    top: 11px;
+    content: "\f002";
+    color: #7f7f7f;
+    font-weight: 900;
 }
 
 .search-container input {
