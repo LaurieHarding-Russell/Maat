@@ -15,7 +15,9 @@ export class ResultsComponent implements OnInit {
               private router: Router) {}
 
   ngOnInit() {
-
+    this.activatedRoute.queryParamMap.subscribe(params => {
+      this.searchControl.setValue(params.get('search'));
+    });
   }
 
   onSearch() {
