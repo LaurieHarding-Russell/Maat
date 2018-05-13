@@ -14,6 +14,11 @@ import { ActivatedRoute } from '@angular/router';
         box-shadow: 2px 3px var(--secondary);
         padding:1rem;
     }
+
+    textarea {
+        width: 100%;
+        height: 4rem;
+    }
   `]
 })
 export class ReviewComponent implements OnInit {
