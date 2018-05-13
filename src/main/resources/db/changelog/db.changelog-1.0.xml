@@ -8,32 +8,33 @@
 
 	<changeSet author="LHR" id="1">
 		<createTable tableName="PRODUCT" schemaName="MAAT">
-			<column name="PRODUCT_ID" type="NUMBER">
+			<column name="ID" type="varchar(36)">
 				<constraints nullable="false" primaryKey="true" />
 			</column>
 			<column name="NAME" type="varchar(64)"> </column>
+			<column name="COUNTRY_OF_ORIGIN" type="varchar(64)"> </column>
 		</createTable>
 	</changeSet>
 	
     <changeSet author="LHR" id="2">
 		<createTable tableName="COMPANY" schemaName="MAAT">
-			<column name="COMPANY_ID" type="NUMBER">
+			<column name="ID" type="varchar(36)">
 				<constraints nullable="false" primaryKey="true" />
 			</column>
 			<column name="NAME" type="varchar(64)"> </column>
-			<column name="PRODUCTS" type="NUMBER"> 
-				<constraints nullable="false" foreignKeyName="fk_company_product__id" references="PRODUCT(PRODUCT_ID)" />
+			<column name="PRODUCTS" type="varchar(36)"> 
+				<constraints nullable="false" foreignKeyName="fk_company_product__id" references="MAAT.PRODUCT(ID)" />
 			</column>
         </createTable>
     </changeSet>
     
 	<changeSet author="LHR" id="3">
         <createTable tableName="PRODUCT_REVIEW" schemaName="MAAT">
-			<column name="PRODUCT_REVIEW_ID" type="NUMBER">
+			<column name="ID" type="NUMBER">
 				<constraints nullable="false" primaryKey="true" />
 			</column>
-			<column name="PRODUCT_ID" type="NUMBER">
-				<constraints nullable="false" foreignKeyName="fk_pr_company_id" references="COMPANY(COMPANY_ID)"/>
+			<column name="PRODUCT_ID" type="varchar(36)">
+				<constraints nullable="false" foreignKeyName="fk_product_review_product_id" references="MAAT.PRODUCT(ID)"/>
 			</column>
 			<column name="AUTHOR" type="varchar2(64)">
 			</column>
@@ -45,8 +46,11 @@
     
    	<changeSet author="LHR" id="4">
         <createTable tableName="COMPANY_REVIEW" schemaName="MAAT">
-			<column name="COMPANY_REVIEW_ID" type="NUMBER">
+			<column name="ID" type="NUMBER">
 				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="COMPANY_ID" type="varchar(36)">
+				<constraints nullable="false" foreignKeyName="fk_company_id" references="MAAT.COMPANY(ID)"/>
 			</column>
 			<column name="AUTHOR" type="varchar2(64)">
 			</column>
