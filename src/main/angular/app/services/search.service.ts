@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject} from "rxjs/index";
+import {Subject} from "rxjs/index";
 import {SearchResult} from "../model/search-result";
 
 const SERVICE_URL = '../api/search';
@@ -8,7 +8,7 @@ const SERVICE_URL = '../api/search';
 @Injectable()
 export class SearchService {
 
-    private searchResults$: BehaviorSubject<SearchResult> = new BehaviorSubject<SearchResult>(null);
+    private searchResults$: Subject<SearchResult> = new Subject<SearchResult>();
     searchResults = this.searchResults$.asObservable();
 
     constructor(private http: HttpClient){}
