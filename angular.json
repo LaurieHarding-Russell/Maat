@@ -5,7 +5,7 @@
   "projects": {
     "Maat": {
       "root": "src/main/angular/",
-      "sourceRoot": "src",
+      "sourceRoot": "src/main/angular",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
