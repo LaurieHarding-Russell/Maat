@@ -1,0 +1,18 @@
+<div class="search-result-container" *ngIf="searchResult">
+    <div class="image-wrapper">
+        <img [src]="searchResult.imagePath"/>
+    </div>
+    <div class="result-body">
+        <div class="header">
+            <span class="name">
+                {{searchResult.name}}
+            </span>
+            <span class="search-rating">
+                {{searchResult.rating}}
+            </span>
+        </div>
+        <div class="description">
+            {{searchResult.description}}
+        </div>
+    </div>
+</div>
