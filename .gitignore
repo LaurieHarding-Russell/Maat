@@ -32,3 +32,7 @@ bin
 bin/*
 /.gradle/
 /build/
+
+src/main/main\.iml
+
+src/test/test\.iml
