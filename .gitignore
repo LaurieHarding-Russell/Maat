@@ -28,3 +28,6 @@ tmp/
 \.gradle/3\.5\.1/fileContent/fileContent\.lock
 
 \.gradle/3\.5\.1/taskHistory/jvmClassSignatures\.bin
+
+.classpath
+.gradle/*
