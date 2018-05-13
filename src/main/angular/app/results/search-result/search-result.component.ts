@@ -12,11 +12,10 @@ export class SearchResultComponent {
     @Input()
     searchResult: SearchResult;
 
-    constructor(private router: Router,
-                private activatedRoute: ActivatedRoute) {}
+    constructor(private router: Router) {}
 
     onNameClick() {
-        const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
+        const queryParams: Params = {};
         queryParams['name'] = this.searchResult.name;
         this.router.navigate(['../company'], {queryParams: queryParams})
     }
