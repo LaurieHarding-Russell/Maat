@@ -1,6 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core';
-import { generateStarArray } from "../general.util"
 
 @Component({
   selector: 'product',
@@ -20,7 +19,6 @@ export class ProductComponent {
 
   constructor(private activatedRoute: ActivatedRoute) { }
   
-  ngOnInit() {
-    this.stars = generateStarArray(this.product.rating);
-  }
+  ngOnInit() {}
+  
 }

@@ -2,10 +2,7 @@
     {{product.name}}
 </h1>
 
-<div class="rating">
-    Rating
-    <i *ngFor="let star of stars" class="fa-star" [ngClass]="{fas: star, far:!star}"></i>
-</div>
+<rating [rating]="product.rating"></rating>
 
 <div class="country-of-origin">
     Country of Origin: {{product.countryOfOrigin}}

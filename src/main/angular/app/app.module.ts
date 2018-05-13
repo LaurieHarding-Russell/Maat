@@ -14,14 +14,20 @@ import {SearchBarComponent} from "./common/search-bar.component";
 import { SearchService } from './services/search.service';
 import {SearchResultComponent} from "./results/search-result/search-result.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ReviewComponent } from './common/review.component';
+import { CommentComponent } from './common/comment.component';
+import { RatingComponent } from './common/rating.component';
 
 @NgModule({
   declarations: [
       AppComponent,
       SearchComponent,
+      CommentComponent,
       CompanyComponent,
       ProductComponent,
+      RatingComponent,
       ResultsComponent,
+      ReviewComponent,
       SearchBarComponent,
       SearchResultComponent
   ],
