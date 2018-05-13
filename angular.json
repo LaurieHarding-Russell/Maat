@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "Maat": {
-      "root": "",
+      "root": "src/main/angular/",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -14,16 +14,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Maat",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "src/main/angular/index.html",
+            "main": "src/main/angular/main.ts",
+            "polyfills": "src/main/angular/polyfills.ts",
+            "tsConfig": "src/main/angular/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/main/angular/favicon.ico",
+              "src/main/angular/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/main/angular/styles.css"
             ],
             "scripts": []
           },
@@ -76,8 +76,8 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/main/angular/favicon.ico",
+              "src/main/angular/assets"
             ]
           }
         },
