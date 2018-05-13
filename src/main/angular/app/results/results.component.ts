@@ -11,16 +11,8 @@ import {SearchService} from "../services/search.service";
 })
 export class ResultsComponent implements OnInit {
 
-  mockSearchResult: SearchResult = {
-      name: 'Google',
-      rating: 3,
-      description: 'The most powerful company in the world',
-      routeId: '',
-      imagePath: ''
-  };
-
   searchControl: FormControl = new FormControl(null);
-  searchResults: Array<SearchResult> = [this.mockSearchResult];
+  searchResults: Array<SearchResult> = [];
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
@@ -30,15 +22,17 @@ export class ResultsComponent implements OnInit {
     this.activatedRoute.queryParamMap.subscribe(params => {
       this.searchControl.setValue(params.get('search'));
     });
+
+    this.searchService.searchResults.subscribe(results => this.searchResults = results);
   }
 
   onSearch() {
     const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
     queryParams['search'] = this.searchControl.value;
 
-    this.router.navigate(['./results'], {queryParams: queryParams});
-
     this.searchService.getCompanies(this.searchControl.value);
+
+    this.router.navigate(['./results'], {queryParams: queryParams});
   }
 
   onLogoClick() {
