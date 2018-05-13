@@ -12,6 +12,7 @@ import {CompanyComponent} from "./company/company.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SearchBarComponent} from "./common/search-bar.component";
 import { SearchService } from './services/search.service';
+import {SearchResultComponent} from "./results/search-result/search-result.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchService } from './services/search.service';
       CompanyComponent,
       ProductComponent,
       ResultsComponent,
-      SearchBarComponent
+      SearchBarComponent,
+      SearchResultComponent
   ],
   imports: [
       BrowserModule,

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {FormControl} from "@angular/forms";
+import {SearchResult} from "../model/search-result";
 
 @Component({
   selector: 'company',
@@ -9,7 +10,16 @@ import {FormControl} from "@angular/forms";
 })
 export class ResultsComponent implements OnInit {
 
+  mockSearchResult: SearchResult = {
+      name: 'Google',
+      rating: 3,
+      description: 'The most powerful company in the world',
+      routeId: '',
+      imagePath: ''
+  };
+
   searchControl: FormControl = new FormControl(null);
+  searchResults: Array<SearchResult> = [this.mockSearchResult];
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router) {}

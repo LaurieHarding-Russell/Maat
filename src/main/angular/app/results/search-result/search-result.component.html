@@ -1,4 +1,4 @@
-<div class="search-result-container">
+<div class="search-result-container" *ngIf="searchResult">
     <div class="image-wrapper">
         <img [src]="searchResult.imagePath"/>
     </div>
@@ -7,7 +7,7 @@
             <span class="name">
                 {{searchResult.name}}
             </span>
-            <span class="rating">
+            <span class="search-rating">
                 {{searchResult.rating}}
             </span>
         </div>
