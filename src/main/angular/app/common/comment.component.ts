@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'comment',
   template: `
     <div>{{comment}}</div>
-    <rating></rating>
+    <rating [rating]="rating" [disabled]="true"></rating>
   `,
   styles: [`
     :host {

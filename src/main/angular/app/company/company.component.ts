@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CompanyComponent implements OnInit {
     company;
-    stars = [true, true, true, false, false];
+    rating = 4;
 
     constructor(private activatedRoute: ActivatedRoute) { }
     

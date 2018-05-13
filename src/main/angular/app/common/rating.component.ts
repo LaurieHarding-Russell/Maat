@@ -4,19 +4,23 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'rating',
   template: `
-    <div class="rating">
-        <i *ngFor="let star of stars" class="fa-star" [ngClass]="{fas: star, far:!star}"></i>
-    </div>
+    <span class="rating">
+        <a *ngFor="let star of stars; let i = index" (click)="rate(i + 1)" class="fa-star" [ngClass]="{fas: star, far:!star}"></a>
+    </span>
   `,
   styles: [`
-    
+    a {
+        color: var(--secondary);
+    }
   `]
 })
+// FIXME, Use control accessor.
 export class RatingComponent implements OnChanges {
     
     stars = [];
 
     @Input() rating: number;
+    @Input() disabled: boolean;
 
     
     constructor(private activatedRoute: ActivatedRoute) { }
@@ -25,7 +29,12 @@ export class RatingComponent implements OnChanges {
         this.stars = this.generateStarArray(this.rating)
     }
 
-    generateStarArray(stars:number) {
+    rate(newRateing: number) {
+        if (!this.disabled)
+            this.stars = this.generateStarArray(newRateing);
+    }
+
+    private generateStarArray(stars:number) {
         const NUMBER_OF_STARS = 5;
         let starArray = [];
         let i = 0;

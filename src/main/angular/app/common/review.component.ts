@@ -4,10 +4,16 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'review',
   template: `
+    <h3> Your Review <rating [rating]="0"></rating></h3>
     <textarea> </textarea>
   `,
   styles: [`
-    
+    :host {
+        display:block;
+        border: 1px solid var(--secondary);
+        box-shadow: 2px 3px var(--secondary);
+        padding:1rem;
+    }
   `]
 })
 export class ReviewComponent implements OnInit {

@@ -1,11 +1,11 @@
-<div class="header">
+<h1 class="header">
     {{company}}
-</div>
+</h1>
 
-<div class="rating">
-    <i *ngFor="let star of stars" class="fa-star" [ngClass]="{fas: star, far:!star}"></i>
-</div>
+<rating [rating]="rating" [disabled]="true"></rating>
+<div class="space"> Todo...
 
+</div>
 <review></review>
 
 <div class="comments">
