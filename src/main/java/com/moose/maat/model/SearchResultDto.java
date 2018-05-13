@@ -2,10 +2,15 @@ package com.moose.maat.model;
 
 import java.math.BigDecimal;
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+@Data
+@Accessors(chain=true)
 public class SearchResultDto {
-	String name;
-	BigDecimal rating;
-	String description;
-	String imagePath;
-	String routeId;
+	private String name;
+	private BigDecimal rating;
+	private String description;
+	private String imagePath;
+	private String routeId;
 }
