@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Subject} from "rxjs/index";
 import {SearchResult} from "../model/search-result";
+import {environment} from "../../environments/environment";
 
 const SERVICE_URL = '../api/search';
 
@@ -14,7 +15,7 @@ export class SearchService {
     constructor(private http: HttpClient){}
 
     getCompanies(companyName: string) {
-        return this.http.get(`//localhost:8080/api/search/${companyName}`).subscribe((results: Array<SearchResult>) => {
+        return this.http.get(`${environment.baseUrl}/api/search/${companyName}`).subscribe((results: Array<SearchResult>) => {
             this.searchResults$.next(results);
         });
     }

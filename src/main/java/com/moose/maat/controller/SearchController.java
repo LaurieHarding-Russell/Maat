@@ -14,7 +14,7 @@ import com.moose.maat.model.SearchResultDto;
 
 @RestController
 @RequestMapping("/api/search")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "https://hackbit.github.io/angularattack2018-moose"})
 public class SearchController {
 	
 	@Autowired
