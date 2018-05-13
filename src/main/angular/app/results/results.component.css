@@ -16,3 +16,7 @@
 .search-container {
     min-width: 50%;
 }
+
+.search-results {
+    padding: 20px;
+}

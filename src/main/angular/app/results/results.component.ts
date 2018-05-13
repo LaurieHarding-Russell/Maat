@@ -21,6 +21,7 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(params => {
       this.searchControl.setValue(params.get('search'));
+        this.searchService.getCompanies(this.searchControl.value);
     });
 
     this.searchService.searchResults.subscribe(results => this.searchResults = results);
@@ -29,8 +30,6 @@ export class ResultsComponent implements OnInit {
   onSearch() {
     const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
     queryParams['search'] = this.searchControl.value;
-
-    this.searchService.getCompanies(this.searchControl.value);
 
     this.router.navigate(['./results'], {queryParams: queryParams});
   }
