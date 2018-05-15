@@ -13,7 +13,9 @@ body {
     --primary: #634f1a;
     --secondary: #8e5715;
     --font-colour: #403d08;
+    --font-colour-light: #eee;
     --background: #bbbd9c;
+    --background-dark: #4CAF50; 
     --danger: #7B1616;
     --success: #397126;
 }
@@ -28,11 +30,11 @@ body {
     text-transform: capitalize;
 }
 
-.rating {
-    margin: 2rem 0;
+button {
+    padding: 0.25rem;
 }
 
-.rating i {
-    color: var(--secondary);
-    margin: 2rem 0;
+button.submit {
+    background: var(--success);
+    color: var(--font-colour-light);
 }

@@ -6,6 +6,8 @@ import { ActivatedRoute } from '@angular/router';
   template: `
     <h3> Your Review <rating [rating]="0"></rating></h3>
     <textarea> </textarea>
+    <button class="submit"> Submit </button>
+    <button> cancel </button>
   `,
   styles: [`
     :host {
