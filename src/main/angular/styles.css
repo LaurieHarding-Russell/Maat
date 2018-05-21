@@ -22,12 +22,24 @@ body {
 } */
 
 /* Theme 1 */
-:root {
+/* :root {
     --primary: #214e24;
     --secondary: #33364c;
     --font-colour: #2f4238;
     --font-colour-light: #eee;
     --background: #829a96;
+    --background-dark: #4CAF50; 
+    --danger: #7B1616;
+    --success: #397126;
+} */
+
+/* Theme 1 */
+:root {
+    --primary: #184a20;
+    --secondary: #214e24;
+    --font-colour: #14422a;
+    --font-colour-light: #eee;
+    --background: #a7d47f;
     --background-dark: #4CAF50; 
     --danger: #7B1616;
     --success: #397126;
