@@ -12,5 +12,5 @@
 
 .user-feed-back {
     border: 1px;
-    border-color: var(--secondary);
+    /* border-color: var(--secondary); */
 }

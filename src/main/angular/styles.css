@@ -9,12 +9,25 @@ body {
     font-family: Roboto;
 }
 
-:root {
+/* Theme 0 */
+/* :root {
     --primary: #634f1a;
     --secondary: #8e5715;
     --font-colour: #403d08;
     --font-colour-light: #eee;
     --background: #bbbd9c;
+    --background-dark: #4CAF50; 
+    --danger: #7B1616;
+    --success: #397126;
+} */
+
+/* Theme 1 */
+:root {
+    --primary: #214e24;
+    --secondary: #33364c;
+    --font-colour: #2f4238;
+    --font-colour-light: #eee;
+    --background: #829a96;
     --background-dark: #4CAF50; 
     --danger: #7B1616;
     --success: #397126;

@@ -14,8 +14,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom,var(--primary),var(--secondary));
-    opacity: .4;
+    background-image: linear-gradient(to bottom,#FFFFFF40,#00000000,#FFFFFF40);
 }
 
 .search-container {

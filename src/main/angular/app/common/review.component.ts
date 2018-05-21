@@ -12,8 +12,8 @@ import { ActivatedRoute } from '@angular/router';
   styles: [`
     :host {
         display:block;
-        border: 1px solid var(--secondary);
-        box-shadow: 2px 3px var(--secondary);
+        border: 1px solid #00000011;
+        outline: 3px solid #00000005;
         padding:1rem;
     }
 
