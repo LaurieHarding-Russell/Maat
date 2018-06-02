@@ -1,6 +1,10 @@
-package app
+package auth
 
-// Not sure about folder structure yet...
-func Init() error {
+import (
+	"log"
+	)
+const path = 'api/auth/'
 
+initAuth {
+	logger.Print("test")
 }
