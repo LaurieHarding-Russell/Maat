@@ -23,16 +23,15 @@ tmp/
 .DS_Store
 /bin/
 
-# Eclipse
-bin
-.classpath
-.project
-.settings/
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-bin/*
-/.gradle/
-/build/
+# Test binary, build with `go test -c`
+*.test
 
-src/main/main\.iml
-
-src/test/test\.iml
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
