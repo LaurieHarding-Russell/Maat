@@ -38,7 +38,7 @@
 			</column>
 			<column name="AUTHOR" type="varchar2(64)">
 			</column>
-			<column name="COMMENT" type="varchar2(1024)">
+			<column name="COMMENT" type="BLOB">
 			</column>
 			<column name="RATING" type="NUMBER"></column>
         </createTable>
@@ -54,7 +54,7 @@
 			</column>
 			<column name="AUTHOR" type="varchar2(64)">
 			</column>
-			<column name="COMMENT" type="varchar2(1024)">
+			<column name="COMMENT" type="BLOB">
 			</column>
 			<column name="RATING" type="NUMBER"></column>
         </createTable>

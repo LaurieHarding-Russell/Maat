@@ -38,3 +38,5 @@ tmp/
 
 # Prod config file
 prod.config.json
+
+liquibase.properties
