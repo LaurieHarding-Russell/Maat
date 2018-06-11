@@ -40,3 +40,7 @@ tmp/
 prod.config.json
 
 liquibase.properties
+
+# bazel
+out/
+bazel-*
