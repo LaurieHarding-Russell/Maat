@@ -3,14 +3,15 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
+	"path/filepath"
 	"time"
-
-	"github.com/gorilla/mux"
 )
 
 func main() {
+
 	initAngular()
-	InitCompanyController()
+	//	InitCompanyController()
 
 	srv := &http.Server{
 		Addr:         "0.0.0.0:8000",
@@ -22,26 +23,9 @@ func main() {
 }
 
 func initAngular() {
-	http.Handle("/", http.FileServer(http.Dir("../../../dist")))
-}
-
-// Need to seperate this out somehow...
-const companyTargetPath = "/api/"
-
-func InitCompanyController() {
-	r := mux.NewRouter()
-	r.HandleFunc("{id}", getCompany).Methods("GET")
-	r.HandleFunc("test", getCompany).Methods("GET")
-	//	r.HandleFunc("/product", ArticlesHandler).get()
-	http.Handle(companyTargetPath, r)
-}
-
-func createCompany(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("test"))
-	return
-}
-
-func getCompany(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("test"))
-	return
+	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if err != nil {
+		log.Fatal(err)
+	}
+	http.Handle("/", http.FileServer(http.Dir(dir+"/maat.runfiles/__main__/dist")))
 }
