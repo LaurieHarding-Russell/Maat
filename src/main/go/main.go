@@ -3,8 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
-	"path/filepath"
 	"time"
 )
 
@@ -23,9 +21,5 @@ func main() {
 }
 
 func initAngular() {
-	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
-	if err != nil {
-		log.Fatal(err)
-	}
-	http.Handle("/", http.FileServer(http.Dir(dir+"/maat.runfiles/__main__/dist")))
+	http.Handle("/", http.FileServer(http.Dir("/app/maat.binary.runfiles/__main__/dist")))
 }

@@ -1,15 +1,20 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary")
 load("@bazel_gazelle//:def.bzl", "gazelle")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 
 gazelle(
     name = "gazelle",
     prefix = "maat.com/maat/webapp",
 )
 
-go_binary(
+go_image(
     name = "maat",
     srcs = glob(["src/main/go/**/*.go"]),
-    visibility = ["//visibility:public"],
+    importpath = "maat.com/maat/webapp",
+    goarch = "amd64",
+    goos = "linux",
+    pure = "on",
     data = [":dist"]
 )
 
