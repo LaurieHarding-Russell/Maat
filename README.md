@@ -8,6 +8,7 @@
 ### Server
 1. bazel build maat
 2. bazel run maat
+3. To kill the server run ctrl-c and the run `docker stop imageName or id`
 
 ### DATABASE
 1. RUN: 
