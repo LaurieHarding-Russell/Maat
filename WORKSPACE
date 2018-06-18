@@ -29,8 +29,13 @@ gazelle_dependencies()
 go_repository(
     name = "com_github_gorilla_mux",
     commit = "cb4698366aa625048f3b815af6a0dea8aef9280a",
-    importpath = "github.com/gorilla/mux",
-    visibility = ["//visibility:public"]
+    importpath = "github.com/gorilla/mux"
+)
+
+go_repository(
+    name = "com_github_gorilla_context",
+    commit = "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+    importpath = "github.com/gorilla/context"
 )
 
 load(

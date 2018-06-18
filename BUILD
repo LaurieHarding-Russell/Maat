@@ -15,10 +15,9 @@ go_image(
     goarch = "amd64",
     goos = "linux",
     pure = "on",
+    deps = ["@com_github_gorilla_mux//:go_default_library"],
     data = [":dist"]
 )
-
-#     deps = ["@com_github_gorilla_mux//:go_default_library"]
 
 
 filegroup(

@@ -9,7 +9,7 @@ import (
 func main() {
 
 	initAngular()
-	//	InitCompanyController()
+	InitCompanyController()
 
 	srv := &http.Server{
 		Addr:         "0.0.0.0:8000",
