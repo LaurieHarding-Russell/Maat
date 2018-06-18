@@ -6,11 +6,8 @@
 1. Run yarn start
 
 ### Server
-Most Id's will build and start go program for you
-
-Alternatively, from this folder run in terminal 
-1. `go build -i ../Maat`
-2. `./Maat`
+1. bazel build maat
+2. bazel run maat
 
 ### DATABASE
 1. RUN: 
