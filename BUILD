@@ -19,6 +19,11 @@ go_image(
     data = [":dist"]
 )
 
+container_image(
+    name = "database",
+    base = "@postgres//image",
+)
+
 
 filegroup(
 	name="dist",

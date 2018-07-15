@@ -40,7 +40,15 @@ go_repository(
 
 load(
     "@io_bazel_rules_docker//go:image.bzl",
+    "container_pull",
     _go_image_repos = "repositories",
 )
 
 _go_image_repos()
+
+container_pull(
+    name = "postgres",
+    registry = "index.docker.io",
+    repository = "library/postgres",
+    tag = "10.4",
+)

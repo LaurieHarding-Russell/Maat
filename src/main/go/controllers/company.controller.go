@@ -13,7 +13,7 @@ func InitCompanyController() {
 	r.HandleFunc("{id}", getCompany).Methods("GET")
 	r.HandleFunc("test", getCompany).Methods("GET")
 	//	r.HandleFunc("/product", ArticlesHandler).get()
-	http.Handle(companyTargetPath, r)
+	http.Handle(companyTargetPath+"test", getCompany)
 }
 
 func createCompany(w http.ResponseWriter, r *http.Request) {
