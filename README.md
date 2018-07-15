@@ -14,6 +14,8 @@
 1. RUN: 
 `sudo docker run --detach=true -p 5432:5432 --name maat-postgres -e -d postgres`
  You may want to change the password 
+ 
+ Or you can run bazel run database.
 
 2. Setup users and schema's.
 `CREATE USER MAAT WITH PASSWORD 'test';`
