@@ -2,26 +2,18 @@ package main
 
 import (
 	"net/http"
+	"fmt"
+	"html"
 
-	"github.com/gorilla/mux"
+
 )
 
-const companyTargetPath = "/api/"
+const companyTargetPath = "/api/v1/company"
 
 func InitCompanyController() {
-	r := mux.NewRouter()
-	r.HandleFunc("{id}", getCompany).Methods("GET")
-	r.HandleFunc("test", getCompany).Methods("GET")
-	//	r.HandleFunc("/product", ArticlesHandler).get()
-	http.Handle(companyTargetPath+"test", getCompany)
+	http.HandleFunc(companyTargetPath, companyHandler)
 }
 
-func createCompany(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("test"))
-	return
-}
-
-func getCompany(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("test"))
-	return
+func companyHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }

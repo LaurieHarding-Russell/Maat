@@ -8,8 +8,8 @@ import (
 
 func main() {
 
-	initAngular()
 	InitCompanyController()
+	initAngular()
 
 	srv := &http.Server{
 		Addr:         "0.0.0.0:8000",
