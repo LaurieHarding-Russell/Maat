@@ -1,13 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    margin: 0;
-    font-family: Roboto;
-}
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Prata|Roboto');
 
 /* Theme 0 */
 /* :root {
@@ -33,7 +25,7 @@ body {
     --success: #397126;
 } */
 
-/* Theme 1 */
+/* Theme 2 */
 :root {
     --primary: #184a20;
     --secondary: #214e24;
@@ -43,6 +35,19 @@ body {
     --background-dark: #4CAF50; 
     --danger: #7B1616;
     --success: #397126;
+
+    --font: 'Roboto', sans-serif;
+    --font-header: 'Prata', serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: var(--font);
 }
 
 * {
@@ -53,6 +58,7 @@ body {
     color: var(--primary);
     margin: 0;
     text-transform: capitalize;
+    font: var(--font-header);
 }
 
 button {
@@ -62,4 +68,28 @@ button {
 button.submit {
     background: var(--success);
     color: var(--font-colour-light);
+}
+
+a {
+    cursor: pointer;
+}
+
+.header {
+    font: var(--font-header);
+    font-size: 2em;
+}
+
+.content-container {
+    margin: 1rem;
+}
+
+.form-group {
+    display: block;
+    padding: 5px;
+}
+
+.form-control {
+    display: block;
+    width:  100%;
+    margin: 5px;
 }

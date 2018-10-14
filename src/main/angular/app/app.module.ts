@@ -17,32 +17,36 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { ReviewComponent } from './common/review.component';
 import { CommentComponent } from './common/comment.component';
 import { RatingComponent } from './common/rating.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { headerBarComponent } from './common/header-bar.component';
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      SearchComponent,
-      CommentComponent,
-      CompanyComponent,
-      ProductComponent,
-      RatingComponent,
-      ResultsComponent,
-      ReviewComponent,
-      SearchBarComponent,
-      SearchResultComponent
-  ],
-  imports: [
-      BrowserModule,
-      AppRoutingModule,
-      ReactiveFormsModule,
-      FormsModule,
-      HttpClientModule,
-  ],
-  providers: [
+    declarations: [
+        AppComponent,
+        SearchComponent,
+        CommentComponent,
+        CompanyComponent,
+        headerBarComponent,
+        ProductComponent,
+        RatingComponent,
+        ResultsComponent,
+        ReviewComponent,
+        SearchBarComponent,
+        SearchResultComponent,
+        SignUpComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientModule,
+    ],
+    providers: [
         SearchService,
         ProductService,
         CompanyService,
-  ],
-  bootstrap: [AppComponent]
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

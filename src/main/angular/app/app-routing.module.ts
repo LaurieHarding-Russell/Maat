@@ -6,6 +6,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 import { CompanyComponent } from './company/company.component';
 import { ProductComponent } from './product/product.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResultsComponent } from './results/results.component';
 
 const routes: Routes = [
@@ -25,8 +26,10 @@ const routes: Routes = [
     path: 'results',
     component: ResultsComponent
   },
-
-
+  {
+    path: 'sign-up',
+    component: SignUpComponent
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

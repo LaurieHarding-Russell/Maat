@@ -18,7 +18,7 @@ export class SearchComponent {
     const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
     queryParams['search'] = this.searchControl.value;
 
-    this.router.navigate(['./results'], {queryParams: queryParams})
+    this.router.navigate(['/results'], {queryParams: queryParams})
   }
     
 }

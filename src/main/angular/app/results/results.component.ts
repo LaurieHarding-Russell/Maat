@@ -11,7 +11,6 @@ import {SearchService} from "../services/search.service";
 })
 export class ResultsComponent implements OnInit {
 
-  searchControl: FormControl = new FormControl(null);
   searchResults: Array<SearchResult> = [];
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -19,23 +18,10 @@ export class ResultsComponent implements OnInit {
               private searchService: SearchService) {}
 
   ngOnInit() {
-    this.activatedRoute.queryParamMap.subscribe(params => {
-      this.searchControl.setValue(params.get('search'));
-        this.searchService.getCompanies(this.searchControl.value);
-    });
-
     this.searchService.searchResults.subscribe(results => this.searchResults = results);
+
+    this.activatedRoute.queryParamMap.subscribe(params => {
+      this.searchService.getCompanies(params.get('searhc'));
+    });
   }
-
-  onSearch() {
-    const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
-    queryParams['search'] = this.searchControl.value;
-
-    this.router.navigate(['./results'], {queryParams: queryParams});
-  }
-
-  onLogoClick() {
-    this.router.navigate(["../"]);
-  }
-
 }

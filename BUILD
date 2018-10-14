@@ -19,13 +19,38 @@ go_image(
     data = [":dist"]
 )
 
-container_image(
-    name = "database",
-    base = "@postgres//image",
-)
-
-
+# Angular, Remember run yarn install then yarn build first
 filegroup(
 	name="dist",
 	srcs = glob(["dist/**/*"])
 )
+
+# Not sure if this is a good idea yet...
+# Database
+# container_image(
+#     name = "database",
+#     base = "@postgres//image",
+#     ports = ["5432:5432"]
+# )
+
+# # liquibase
+# filegroup(
+# 	name="liquibaseChangelog",
+#     srcs = glob(["src/resources/db/changelog/*"])
+# )
+
+# filegroup(
+# 	name="liquibaseProperties",
+#     srcs = ["src/resources/db/liquibase.properties"]
+# )
+
+# genrule(
+#     name = "liquibase",
+#     message = "running liquibase",
+#     srcs = ["@liquibase_jar", "liquibaseProperties", "liquibaseChangelog"],
+#     # executable = 1,
+#     cmd = "java -jar $(location @liquibase//:liquibase.jar) -version > $@",
+#     # cmd = "java -jar $(location @liquibase//liquibase.jar) --defaultsFile=$(location liquibase.properties) update >$@",
+#     # cmd = "ls $(location @liquibase_liquibase-core_3//jar)",
+#     outs = []
+# )

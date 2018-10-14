@@ -1,14 +1,5 @@
 <div class="page-container">
-    <div class="header-container">
-        <div class="title" (click)="onLogoClick()">
-            MAAT
-        </div>
-        <div class="search-container">
-            <form class="search-bar" (ngSubmit)="onSearch()">
-                <search-bar [formControl]="searchControl"></search-bar>
-            </form>
-        </div>
-    </div>
+    <header-bar></header-bar>
 
     <div class="search-results">
         <search-result *ngFor="let searchResult of searchResults" [searchResult]="searchResult"></search-result>

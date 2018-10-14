@@ -7,6 +7,12 @@
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 	<changeSet author="LHR" id="1">
+		<sql dbms="postgresql" endDelimiter=";">
+			CREATE SCHEMA maat
+		</sql>
+	</changeSet>
+
+	<changeSet author="LHR" id="2">
 		<createTable tableName="PRODUCT" schemaName="MAAT">
 			<column name="ID" type="varchar(36)">
 				<constraints nullable="false" primaryKey="true" />
@@ -16,7 +22,7 @@
 		</createTable>
 	</changeSet>
 	
-    <changeSet author="LHR" id="2">
+    <changeSet author="LHR" id="3">
 		<createTable tableName="COMPANY" schemaName="MAAT">
 			<column name="ID" type="varchar(36)">
 				<constraints nullable="false" primaryKey="true" />
@@ -28,7 +34,7 @@
         </createTable>
     </changeSet>
     
-	<changeSet author="LHR" id="3">
+	<changeSet author="LHR" id="4">
         <createTable tableName="PRODUCT_REVIEW" schemaName="MAAT">
 			<column name="ID" type="NUMBER">
 				<constraints nullable="false" primaryKey="true" />
@@ -44,7 +50,7 @@
         </createTable>
     </changeSet>
     
-   	<changeSet author="LHR" id="4">
+   	<changeSet author="LHR" id="5">
         <createTable tableName="COMPANY_REVIEW" schemaName="MAAT">
 			<column name="ID" type="NUMBER">
 				<constraints nullable="false" primaryKey="true" />
@@ -57,6 +63,38 @@
 			<column name="COMMENT" type="BLOB">
 			</column>
 			<column name="RATING" type="NUMBER"></column>
+        </createTable>
+    </changeSet>
+
+	<changeSet author="LHR" id="5">
+        <createTable tableName="COMPANY_REVIEW" schemaName="MAAT">
+			<column name="ID" type="NUMBER">
+				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="COMPANY_ID" type="varchar(36)">
+				<constraints nullable="false" foreignKeyName="fk_company_id" references="MAAT.COMPANY(ID)"/>
+			</column>
+			<column name="AUTHOR" type="varchar2(64)">
+			</column>
+			<column name="COMMENT" type="BLOB">
+			</column>
+			<column name="RATING" type="NUMBER"></column>
+        </createTable>
+    </changeSet>
+
+	<changeSet author="LHR" id="6">
+        <createTable tableName="user" schemaName="MAAT">
+			<column name="USER_NAME">
+				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="password" type="NUMBER">
+				<constraints nullable="false"/>
+			</column>
+        </createTable>
+    </changeSet>
+
+	<changeSet author="LHR" id="7">
+        <createTable tableName="session" schemaName="MAAT">
         </createTable>
     </changeSet>
 

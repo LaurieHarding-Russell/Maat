@@ -8,12 +8,21 @@ import (
 
 )
 
-const companyTargetPath = "/api/v1/company"
+const companyTargetPath = "/api/company"
 
 func InitCompanyController() {
 	http.HandleFunc(companyTargetPath, companyHandler)
 }
 
-func companyHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+func companyHandler(writer http.ResponseWriter, request *http.Request) {
+	if request.Method == "GET" {
+
+	} else {
+		
+	}
+		
+	fmt.Fprintf(writer, "Hello, %q", html.EscapeString(request.URL.Path))
+	fmt.Fprintf(writer, "1, %q", request.Proto)
+	fmt.Fprintf(writer, "2, %q", request.Method)
+	fmt.Fprintf(writer, "3, %q", request.Proto)
 }

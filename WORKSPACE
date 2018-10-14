@@ -52,3 +52,8 @@ container_pull(
     repository = "library/postgres",
     tag = "10.4",
 )
+
+new_http_archive(
+    name = "liquibase_jar",
+    url = "https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.5/liquibase-3.5.5-bin.tar.gz",
+)
