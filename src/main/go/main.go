@@ -9,6 +9,7 @@ import (
 func main() {
 
 	InitCompanyController()
+	InitAuthenticationController()
 	initAngular()
 
 	srv := &http.Server{

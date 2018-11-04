@@ -19,6 +19,7 @@ import { CommentComponent } from './common/comment.component';
 import { RatingComponent } from './common/rating.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { headerBarComponent } from './common/header-bar.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
     declarations: [
@@ -46,6 +47,7 @@ import { headerBarComponent } from './common/header-bar.component';
         SearchService,
         ProductService,
         CompanyService,
+        AuthService,
     ],
     bootstrap: [AppComponent]
 })

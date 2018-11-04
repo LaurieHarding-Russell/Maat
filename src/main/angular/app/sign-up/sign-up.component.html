@@ -4,15 +4,23 @@
         <h1 class="header">
             Sign Up
         </h1>
-        <form class="form-group" (ngSubmit)="onSearch()">
+        <form class="form-group" (ngSubmit)="register()" [formGroup]="formGroup">
             <label>Username</label>
-            <input class="form-control"/>
+            <input class="form-control" formControlName="username"/>
+            <div class="error" *ngIf="this.formGroup.get('username').getError('required')"> Required</div>
 
             <label>Password</label>
-            <input class="form-control"/>
+            <input type="password" class="form-control" formControlName="password"/>
+            <div class="error" *ngIf="this.formGroup.get('password').getError('required')"> Required</div>
+            <div class="error">{{this.formGroup.get('password').getError('equal')}}</div>
 
             <label>New Password</label>
-            <input class="form-control"/>
+            <input type="password" class="form-control" formControlName="password2"/>
+            <div class="error" *ngIf="this.formGroup.get('password2').getError('required')"> Required</div>
+            <div class="error">{{this.formGroup.get('password2').getError('equal')}}</div>
+
+            <button type="submit" class="submit">Submit</button>
         </form>
+        <div class="error" *ngIf="formGroup.invalid"> Errors in form</div>
     </div>
 </div>

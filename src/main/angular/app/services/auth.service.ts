@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { LoginInfo } from "../model/loginInfo";
 
 const SERVICE_URL = '../api/auth';
 
@@ -9,13 +10,13 @@ interface Company {
 }
 
 @Injectable()
-export class CompanyService {
+export class AuthService {
 
     constructor(private http: HttpClient) {}
 
-    createUser() {
+    createUser(loginInfo: LoginInfo) {
         return this.http
-            .post(`${SERVICE_URL}/create`, {});
+            .post(`${SERVICE_URL}/create`, loginInfo);
     }
 
     login() {
